@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <style>
+    .disabled {
+      color: lightgray;
+      transition: color 1s ease;
+    }
+  </style>
+  <body>
+    <h1>Hello from HTML!</h1>
+    <div id="app">
+      <button v-on:click="loadTodos()">Load Todos</button>
+      {{ todos }}
+      <div v-for="todo in todos">
+        <h4>Title: {{</h4>
+      </div>
+      <h1>{{message}}</h1>
+      <h2>{{name}}</h2>
+      <button v-on:click="changeMessage()">Click it!</button>
+      <input type="text" v-model="name" />
+      <br />
+      <br />
+      <br />
+      <div>
+        <button v-on:click="showInfo = !showInfo">Toggle!</button>
+        <p v-bind:class="{disabled: showInfo}">Extra Information!</p>
+      </div>
+
+      <div v-for="fruit in fruits">
+        <p>{{ fruit }}</p>
+      </div>
+      <input type="text" v-model="newFruit" />
+      <button v-on:click="addNewFruit()">Add that fruit!</button>
+    </div>
+  </body>
+</html>
