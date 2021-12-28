@@ -10,6 +10,7 @@ var app = new Vue({
       number3: 0,
       sum: 0,
       product: 0,
+      subtract: 0
     };
   },
   
@@ -20,6 +21,10 @@ var app = new Vue({
 
     computeProduct: function() {
       this.product = parseInt(this.number1) * parseInt(this.number2) * parseInt(this.number3);
+    },
+
+    computeSubtraction: function () {
+      this.subtract = parseInt(this.number1) - parseInt(this.number2);
     },
   },  
 });    
