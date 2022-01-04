@@ -16,7 +16,9 @@
   <body>
     <h1>Hello from HTML!</h1>
     <div id="app">
-      <!-- <button v-on:click="loadTodos()">Load Todos</button> -->
+      Title:
+      <input type="text" v-model="title" />
+      <button v-on:click="createTodo()">Create New To Do</button>
       <div v-for="todo in todos">
         <h4>Title: {{todo.title}}</h4>
         <p>Completed? {{todo.completed}}</p>
