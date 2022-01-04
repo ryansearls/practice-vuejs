@@ -17,9 +17,8 @@
     <h1>Hello from HTML!</h1>
     <div id="app">
       <button v-on:click="loadTodos()">Load Todos</button>
-      {{ todos }}
       <div v-for="todo in todos">
-        <h4>Title: {{</h4>
+        <h4>Title: {{todo.title}}</h4>
       </div>
       <h1>{{message}}</h1>
       <h2>{{name}}</h2>
